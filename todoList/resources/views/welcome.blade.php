@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+{{--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">--}}
 
-<div style="color: black;">
+<img style="color: black;">
     <p> To do list</p>
 
-{{--    @foreach($listItems as $listItem)--}}
-{{--        <div>Item:{{ $listItem -> name }}</div>--}}
-{{--    @endforeach--}}
+    @foreach($listItems as $listItem)
+        <div>Item:{{ $listItem -> name }}</div>
+        <img src="{{ asset('/storage/product/' .$listItem->file_path ) }}" />
+    @endforeach
 </div>
 
 <div>
-
-
     <form action="{{ route('saveItem') }}" method="post" enctype="multipart/form-data">
         <!-- Add CSRF Token -->
         @csrf
