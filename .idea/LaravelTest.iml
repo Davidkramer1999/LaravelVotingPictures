@@ -101,6 +101,7 @@
       <excludeFolder url="file://$MODULE_DIR$/todoList/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/todoList/vendor/symfony/http-kernel" />
       <excludeFolder url="file://$MODULE_DIR$/todoList/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/todoList/vendor/laravel/ui" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

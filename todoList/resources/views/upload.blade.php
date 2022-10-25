@@ -1,19 +1,10 @@
 <!DOCTYPE html>
-{{--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">--}}
-
-<img style="color: black;">
-    <p> To do list</p>
-
-    @foreach($listItems as $listItem)
-        <div>Item:{{ $listItem -> name }}</div>
-        <img src="{{ asset('/storage/product/' .$listItem->file_path ) }}" />
-    @endforeach
-</div>
-
+UPLOAD PICTURE
+<li><a href="{{ url('/home') }}">Home</a></li>
 <div>
     <form action="{{ route('saveItem') }}" method="post" enctype="multipart/form-data">
-        <!-- Add CSRF Token -->
         @csrf
+        @method('POST')
         <div class="form-group">
             <label>Product Name</label>
             <input type="text" class="form-control" name="name" required>
@@ -25,6 +16,3 @@
     </form>
 
 </div>
-
-
-</html>
